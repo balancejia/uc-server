@@ -1,0 +1,54 @@
+# 应用名称
+spring.application.name: uc-server
+spring.pid.file: /var/run/uc-server.pid
+spring.application.instance_id: 127.0.0.1
+server:
+  port: 8083
+
+#日志配置
+logging.file: /var/log/yealink/uc-server/uc-server.log
+logging.level.root: DEBUG
+
+# 监控配置
+management.health.jms.enabled: false
+
+# tomcat配置
+server.tomcat.max-connections: 10000
+server.tomcat.max-threads: 800
+
+
+spring.messages.basename: i18n/messages
+spring.jackson.date-format: "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+
+## mybatis
+mybatis.mapper-locations: classpath:com/yealink/uc/mapper/*.xml
+spring.datasource.driverClassName: com.mysql.jdbc.Driver
+
+##spring.datasource.url: "jdbc:mysql://localhost:3306/ops_uc?useUnicode=true&characterEncoding=utf8"
+##spring.datasource.username: root
+##spring.datasource.password: ledefe
+
+
+spring.datasource.url: "jdbc:mysql://10.200.110.97:3306/ops_uc?useUnicode=true&characterEncoding=utf8"
+spring.datasource.username: root
+spring.datasource.password: ledefe
+
+## AD配置
+ad:
+ adName:
+   - yealink.com: xmyl
+   - yealink.cn: hzyl
+     
+ adProperties:
+   xmyl:
+     port: 389
+     base: OU=亿联-用户,DC=yealink,DC=com
+     username: yl1724@yealink.com 
+     password: www.
+
+   hzyl:
+     port: 389
+     base: OU=杭分-用户,DC=yealink,DC=cn
+     username: yujftest@yealink.cn
+     password: xxxxxxdd
+ 
