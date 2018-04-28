@@ -8,5 +8,5 @@
 
    Mac Token 主要用于前后端交互的认证方式
    
-   Bearer Token 主要用户服务间的交互认证方式
+   Bearer Token 主要用于服务间的交互认证方式
 * 托管所有服务的权限管理和鉴权，提供统一的权限认证服务(基于restful-api)
